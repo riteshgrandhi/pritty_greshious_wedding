@@ -1,0 +1,57 @@
+.wrapper {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  overflow: hidden;
+}
+
+.logo {
+  width: 60vw;
+  height: 60vh;
+  position: absolute;
+  object-fit: cover;
+  top: 1vh;
+  left: 1vw;
+  z-index: 10;
+}
+
+.logo.mobile {
+  top: 5vh;
+  left: 5vw;
+  height: 30vh;
+  width: 90vw;
+}
+
+.bgWrapper {
+  overflow: hidden;
+  width: 100vw;
+  height: 100vh;
+}
+
+.bg {
+  /* top: 0;
+  left: 0; */
+  width: 110vw;
+  height: 110vh;
+  object-fit: cover;
+  object-position: center;
+  left: 1vw;
+}
+
+.bg.mobile {
+  object-position: 62% center;
+}
+
+.overlay {
+  top: 0;
+  left: 0;
+  position: absolute;
+  width: 100vw;
+  height: 100vh;
+  background: linear-gradient(
+    0deg,
+    rgba(255, 241, 230, 0.7),
+    rgba(255, 241, 230, 0.7)
+  );
+  object-fit: cover;
+}

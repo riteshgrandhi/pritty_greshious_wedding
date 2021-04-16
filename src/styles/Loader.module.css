@@ -1,0 +1,33 @@
+.item {
+  overflow: visible;
+  transform: scale(0.5);
+  stroke: #000;
+  stroke-width: 6;
+  stroke-linejoin: round;
+  stroke-linecap: round;
+  z-index: 999;
+}
+
+.item.mobile {
+  transform: scale(0.4);
+  stroke-width: 8;
+}
+
+.wrapper {
+  position: absolute;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 999;
+  text-align: center;
+  width: 20vw;
+}
+
+.overlay {
+  position: absolute;
+  width: 100vw;
+  height: 100vh;
+  z-index: 99;
+  background: linear-gradient(0deg, rgba(255, 241, 230), rgba(255, 241, 230));
+  object-fit: cover;
+}
