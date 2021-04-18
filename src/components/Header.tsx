@@ -1,42 +1,61 @@
-import { motion } from "framer-motion";
+import { motion, Variants } from "framer-motion";
 import React from "react";
-import { useMediaQuery } from "react-responsive";
+import { LoadableProps } from "../types/LoadableProps";
+import { useParallaxY } from "../utils/useParallaxY";
+import { useResponsiveStyles } from "../utils/useResponsiveStyles";
 import styles from "./../styles/Header.module.css";
 
-interface HeaderProps {
-  onLoaded: () => void;
-}
+interface HeaderProps {}
 
-export const Header: React.FC<HeaderProps> = (props) => {
-  //   const isDesktopOrLaptop = useMediaQuery({ minDeviceWidth: 1224 });
-  //   const isBigScreen = useMediaQuery({ minDeviceWidth: 1824 });
-  const isTabletOrMobile = useMediaQuery({ maxWidth: 1224 });
+export const Header: React.FC<HeaderProps & LoadableProps> = (props) => {
   const publicUrl = process.env.PUBLIC_URL;
-  //   const isTabletOrMobileDevice = useMediaQuery({ maxDeviceWidth: 1224 });
-  //   const isPortrait = useMediaQuery({ orientation: "portrait" });
-  //   const isRetina = useMediaQuery({ minResolution: "2dppx" });
+  const responsiveStyles = useResponsiveStyles(styles);
+  const posYAnim = useParallaxY(75);
+
+  const logoVariants: Variants = {
+    initial: {
+      opacity: 0,
+      y: -50,
+    },
+    final: {
+      opacity: 1,
+      y: 0,
+    },
+  };
+
+  const bgVariants: Variants = {
+    initial: {
+      opacity: 0,
+    },
+    final: {
+      opacity: 1,
+    },
+  };
 
   return (
     <div className={styles.wrapper}>
-      <img
+      <motion.img
         src={`${publicUrl}/images/RR_logo4_red_4K_transparent.png`}
         alt="logo"
-        className={`${styles.logo} ${isTabletOrMobile ? styles.mobile : ""}`}
+        className={`${styles.logo} ${responsiveStyles.mobile}`}
+        variants={logoVariants}
+        initial="initial"
+        animate="final"
+        transition={{ delay: 0.5, duration: 1, ease: "easeIn" }}
+        onLoad={() => props.onLoaded()}
       />
-      <div className={styles.bgWrapper}>
-        <div className={styles.overlay} />
-        <motion.img
-          src={`${process.env.PUBLIC_URL}/images/VIN03846.JPG`}
-          // initial={{ scale: 1 }}
-          // animate={{ scale: 1.1 }}
-          // transition={{ ease: "easeInOut", duration: 5, yoyo: Infinity }}
-          alt="background"
-          className={`${styles.bg} ${isTabletOrMobile ? styles.mobile : ""}`}
-          onLoad={() => {
-            props.onLoaded();
-          }}
-        />
-      </div>
+      <motion.div
+        className={`${styles.bg} ${responsiveStyles.mobile}`}
+        style={{
+          backgroundImage: `url(${publicUrl}/images/VIN03846.JPG)`,
+          // backgroundPositionY: `${posY}%`,
+          y: posYAnim,
+        }}
+        variants={bgVariants}
+        initial="initial"
+        animate="final"
+        transition={{ delay: 0.5, duration: 1, ease: "easeIn" }}
+      />
     </div>
   );
 };
