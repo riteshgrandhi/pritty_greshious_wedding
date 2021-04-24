@@ -1,10 +1,7 @@
-import {
-  motion,
-  Variants,
-} from "framer-motion";
+import { motion, Variants } from "framer-motion";
 import React from "react";
 import { LoadableProps } from "../types/LoadableProps";
-import { useParallaxY } from "../utils/useParallaxY";
+import { useParallax } from "../utils/useParallax";
 import { useResponsiveStyles } from "../utils/useResponsiveStyles";
 import styles from "./../styles/Events.module.css";
 
@@ -15,7 +12,7 @@ interface EventProps {
 export const Events: React.FC<EventProps & LoadableProps> = ({ index }) => {
   const publicUrl = process.env.PUBLIC_URL;
   const responsiveStyles = useResponsiveStyles(styles);
-  const posYAnim = useParallaxY(75);
+  const posYAnim = useParallax("y", [-75, 75]);
 
   const bgVariants: Variants = {
     initial: {

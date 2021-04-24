@@ -1,9 +1,9 @@
 import React, { useState } from "react";
 import { Header } from "../components/Header";
 import Loader from "../components/Loader";
-import styles from "./App.module.css";
 import { Events } from "../components/Events";
 import { Container } from "../components/Container";
+import styles from "./../styles/App.module.css";
 
 function App() {
   const [isLoading, setIsLoading] = useState(true);
@@ -23,8 +23,6 @@ function App() {
             // setIsLoading(false);
           }}
         />
-        {/* <Events onLoaded={() => {}} />
-        <Events onLoaded={() => {}} /> */}
       </Container>
     </div>
   );

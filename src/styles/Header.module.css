@@ -7,21 +7,26 @@
   height: 100vh;
 }
 
-.logo {
+.logoWrapper {
   width: 60vw;
-  height: 60vh;
+  top: -5vh;
+  left: 0vw;
   position: absolute;
-  object-fit: cover;
-  top: 1vh;
-  left: 1vw;
+  transform: rotate(-20deg);
   z-index: 10;
 }
 
-.logo.mobile {
-  top: 5vh;
+.logoWrapper.mobile {
+  top: 10vh;
   left: 5vw;
   height: 30vh;
-  width: 90vw;
+  width: 75vw;
+}
+
+.logo {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
 }
 
 .bg {
@@ -30,9 +35,44 @@
   background-repeat: no-repeat;
   background-size: 120vw;
   box-shadow: inset 0 0 0 2000px rgba(255, 241, 230, 0.7);
+  overflow-x: hidden;
 }
 
 .bg.mobile {
   background-size: cover;
   background-position: 60% center;
+}
+
+.headerTextWrapper {
+  width: 60vw;
+  bottom: 5vh;
+  height: 50vh;
+  right: 5vw;
+  position: absolute;
+  overflow: hidden;
+  z-index: 10;
+}
+
+.headerTextWrapper.mobile {
+  width: 100vw;
+  bottom: 0vh;
+  right: -5vw;
+}
+
+.headerText {
+  color: #3a3a3a;
+  font-family: "Romantic";
+  font-size: 4em;
+  text-align: center;
+  overflow: visible;
+  right: 10vw;
+  transform: rotate(-20deg);
+}
+
+.headerText .names {
+  font-size: 1.4em;
+}
+
+.headerText.mobile {
+  font-size: 2.4em;
 }
