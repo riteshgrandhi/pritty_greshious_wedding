@@ -1,0 +1,21 @@
+.wrapper {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  overflow: hidden;
+  height: 100vh;
+}
+
+.bg {
+  width: 100%;
+  height: 130%;
+  background-repeat: no-repeat;
+  background-size: 160vw;
+  background-position: 2% 80%;
+  box-shadow: inset 0 0 0 2000px rgba(237, 246, 249, 0.8);
+}
+
+.bg.mobile {
+  background-size: cover;
+  background-position: 31% center;
+}

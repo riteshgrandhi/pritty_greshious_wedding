@@ -12,7 +12,24 @@
                                 'embedded-opentype', and 'svg' */
 }
 
-html, body {
+@font-face {
+  font-family: "Quicksand_Bold";
+  src: local("Quicksand_Bold"),
+    url(./fonts/Quicksand_Bold.otf) format("opentype");
+  /* other formats include: 'woff2', 'truetype, 'opentype',
+                                'embedded-opentype', and 'svg' */
+}
+
+@font-face {
+  font-family: "Quicksand_Book";
+  src: local("Quicksand_Book"),
+    url(./fonts/Quicksand_Book.otf) format("opentype");
+  /* other formats include: 'woff2', 'truetype, 'opentype',
+                                'embedded-opentype', and 'svg' */
+}
+
+html,
+body {
   max-width: 100vw;
   overflow-x: hidden;
 }

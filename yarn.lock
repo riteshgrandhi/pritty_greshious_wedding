@@ -1837,6 +1837,13 @@
   dependencies:
     "@types/react" "*"
 
+"@types/react-vertical-timeline-component@^3.0.0":
+  version "3.0.0"
+  resolved "https://registry.yarnpkg.com/@types/react-vertical-timeline-component/-/react-vertical-timeline-component-3.0.0.tgz#453121f799e57083e66c71dbad2cd3d575246ef6"
+  integrity sha512-29c+gYqNSLhuVO9TV013/9UtPi9/nyqe56SuVUW9sNzuL9jwdGHY47UsWo+J8VqFXFAmr/58LFVs8QLyQJX8/A==
+  dependencies:
+    "@types/react" "*"
+
 "@types/react@*", "@types/react@^17.0.0":
   version "17.0.3"
   resolved "https://registry.yarnpkg.com/@types/react/-/react-17.0.3.tgz#ba6e215368501ac3826951eef2904574c262cc79"
@@ -3302,6 +3309,11 @@ class-utils@^0.3.5:
     define-property "^0.2.5"
     isobject "^3.0.0"
     static-extend "^0.1.1"
+
+classnames@^2.2.6:
+  version "2.3.1"
+  resolved "https://registry.yarnpkg.com/classnames/-/classnames-2.3.1.tgz#dfcfa3891e306ec1dad105d0e88f4417b8535e8e"
+  integrity sha512-OlQdbZ7gLfGarSqxesMesDa5uz7KFbID8Kpq/SxIoNGDqY8lSYs0D+hhtBXhcdB3rcbXArFr7vlHheLk1voeNA==
 
 clean-css@^4.2.3:
   version "4.2.3"
@@ -9177,6 +9189,11 @@ react-error-overlay@^6.0.9:
   resolved "https://registry.yarnpkg.com/react-error-overlay/-/react-error-overlay-6.0.9.tgz#3c743010c9359608c375ecd6bc76f35d93995b0a"
   integrity sha512-nQTTcUu+ATDbrSD1BZHr5kgSD4oF8OFjxun8uAaL8RwPBacGBNPf/yAuVVdx17N8XNzRDMrZ9XcKZHCjPW+9ew==
 
+react-intersection-observer@^8.26.2:
+  version "8.31.1"
+  resolved "https://registry.yarnpkg.com/react-intersection-observer/-/react-intersection-observer-8.31.1.tgz#dea4e9a10bbfc899c4159eadd94354cc083920b5"
+  integrity sha512-Q4OH2aUXcEi6tPBBgOBjfodoRM68wikXqqbPf8FaY4VBMcSACbxulfkW/OqcfLYfSAOEPGvxN+NCn9PqBgAOfQ==
+
 react-is@^16.8.1:
   version "16.13.1"
   resolved "https://registry.yarnpkg.com/react-is/-/react-is-16.13.1.tgz#789729a4dc36de2999dc156dd6c1d9c18cea56a4"
@@ -9267,6 +9284,15 @@ react-scripts@4.0.3:
     workbox-webpack-plugin "5.1.4"
   optionalDependencies:
     fsevents "^2.1.3"
+
+react-vertical-timeline-component@^3.3.3:
+  version "3.3.3"
+  resolved "https://registry.yarnpkg.com/react-vertical-timeline-component/-/react-vertical-timeline-component-3.3.3.tgz#0c87e92be0af11ea895743f267be0e07e941e8e1"
+  integrity sha512-zvztiWKFYYPqq0vDrWoBcLJC6ok5A4nvdgxHq94JKVyjwUypojGHZQxDSjDzmLkgLRrA2kVjNzfNnv6eQ/O80A==
+  dependencies:
+    classnames "^2.2.6"
+    prop-types "^15.7.2"
+    react-intersection-observer "^8.26.2"
 
 react@^17.0.2:
   version "17.0.2"

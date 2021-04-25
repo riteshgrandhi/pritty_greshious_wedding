@@ -1,10 +1,25 @@
 .wrapper {
+  position: absolute;
+  z-index: 10;
+  top: 100vh;
+  width: 100vw;
+  height: 100%;
+  overflow-y: auto;
+}
+
+.iconWrapper {
+  width: 100%;
+  height: 100%;
   display: flex;
   justify-content: center;
   align-items: center;
-  overflow: hidden;
-  width: 100vw;
-  height: 100vh;
+}
+
+.icon {
+  border-radius: 50%;
+  width: 20px;
+  height: 20px;
+  background: white;
 }
 
 .bg {
@@ -19,4 +34,18 @@
 .bg.mobile {
   background-size: cover;
   background-position: 31% center;
+}
+
+.eventWrapper {
+  background: none;
+  margin: 1em 0 !important;
+}
+
+.eventDateTime {
+  font-family: "Quicksand_Bold";
+  font-size: 1.5em !important;
+}
+
+.eventDateTime.mobile {
+  font-size: 1.2em !important;
 }

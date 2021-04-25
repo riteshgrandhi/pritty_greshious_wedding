@@ -1,41 +1,85 @@
-import { motion, Variants } from "framer-motion";
 import React from "react";
-import { LoadableProps } from "../types/LoadableProps";
-import { useParallax } from "../utils/useParallax";
-import { useResponsiveStyles } from "../utils/useResponsiveStyles";
+import { Event, EventProps } from "./Event";
 import styles from "./../styles/Events.module.css";
+import { ParallaxPage } from "./ParallaxPage";
+import { useResponsiveStyles } from "../utils/useResponsiveStyles";
+import {
+  VerticalTimeline,
+  VerticalTimelineElement,
+} from "react-vertical-timeline-component";
+import "react-vertical-timeline-component/style.min.css";
 
-interface EventProps {
-  index: number;
-}
+const Icon: React.FC = () => (
+  <div className={styles.iconWrapper}>
+    <div className={styles.icon} />
+  </div>
+);
 
-export const Events: React.FC<EventProps & LoadableProps> = ({ index }) => {
-  const publicUrl = process.env.PUBLIC_URL;
+export const Events: React.FC = () => {
   const responsiveStyles = useResponsiveStyles(styles);
-  const posYAnim = useParallax("y", [-75, 75]);
-
-  const bgVariants: Variants = {
-    initial: {
-      opacity: 0,
+  const events: EventProps[] = [
+    {
+      eventName: "Bridal Shower & Mehendi",
+      eventDescription:
+        "Lorem ipsum dolor sit amet consectetur, adipisicing elit. Nam distinctio porro eveniet, atque ex id reprehenderit consequuntur dicta beatae neque aperiam possimus",
+      eventLocation: "Bride's Home, Konalli, Karnataka",
+      eventDateTime: "10:00 AM onwards, 19th May 2021",
     },
-    final: {
-      opacity: 1,
+    {
+      eventName: "Groom's Rituals",
+      eventDescription:
+        "Lorem ipsum dolor sit amet consectetur, adipisicing elit. Nam distinctio porro eveniet, atque ex id reprehenderit consequuntur dicta beatae neque aperiam possimus",
+      eventLocation: "Grama Okkaliga Sabhabhavana Manira, Kumta, Karnataka",
+      eventDateTime: "6:00 AM onwards, 20th May 2021",
     },
-  };
+    {
+      eventName: "The Wedding",
+      eventDescription:
+        "Lorem ipsum dolor sit amet consectetur, adipisicing elit. Nam distinctio porro eveniet, atque ex id reprehenderit consequuntur dicta beatae neque aperiam possimus",
+      eventLocation: "Grama Okkaliga Sabhabhavana Manira, Kumta, Karnataka",
+      eventDateTime: "11:10 AM, 20th May 2021",
+    },
+    {
+      eventName: "Reception",
+      eventDescription:
+        "Lorem ipsum dolor sit amet consectetur, adipisicing elit. Nam distinctio porro eveniet, atque ex id reprehenderit consequuntur dicta beatae neque aperiam possimus",
+      eventLocation: "Chamber of Commerce, Rajahmundry, Andhra Pradesh",
+      eventDateTime: "7:30 PM onwards, 24th May 2021",
+    },
+  ];
 
   return (
-    <div className={styles.wrapper}>
-      <motion.div
-        className={`${styles.bg} ${responsiveStyles.mobile}`}
-        style={{
-          backgroundImage: `url(${publicUrl}/images/Ritesh_fort.jpg)`,
-          y: posYAnim,
-        }}
-        variants={bgVariants}
-        initial="initial"
-        animate="final"
-        transition={{ delay: 0.5, duration: 1, ease: "easeIn" }}
-      />
-    </div>
+    <ParallaxPage
+      bgImage="/images/fort.jpg"
+      bgClassName={`${styles.bg} ${responsiveStyles.mobile}`}
+    >
+      <div className={styles.wrapper}>
+        <VerticalTimeline>
+          {events.map((e, i) => (
+            <VerticalTimelineElement
+              key={i}
+              className={styles.eventWrapper}
+              contentStyle={{
+                background: "none",
+                boxShadow: "none",
+                padding: "0",
+              }}
+              contentArrowStyle={{
+                borderRight: "7px solid rgba(255, 232, 214, 0.6)",
+              }}
+              icon={<Icon />}
+              iconStyle={{
+                background: "none",
+                boxShadow: "none",
+              }}
+              date={e.eventDateTime}
+              dateClassName={`${styles.eventDateTime} ${responsiveStyles.mobile}`}
+            >
+              <Event {...e} />
+            </VerticalTimelineElement>
+          ))}
+        </VerticalTimeline>
+      </div>
+    </ParallaxPage>
   );
 };

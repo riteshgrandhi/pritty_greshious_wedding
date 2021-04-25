@@ -3,22 +3,37 @@
   justify-content: center;
   align-items: center;
   overflow: hidden;
+  position: absolute;
   width: 100vw;
   height: 100vh;
 }
 
+.wrapper.mobile {
+  flex-direction: column;
+}
+
+.logoWrapperWrapper {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  overflow: visible;
+  height: 50vh;
+  width: 50vw;
+  padding-bottom: 50vh;
+}
+
+.logoWrapperWrapper.mobile {
+  width: 100vw;
+  padding-bottom: 0;
+}
+
 .logoWrapper {
   width: 60vw;
-  top: -5vh;
-  left: 0vw;
-  position: absolute;
   transform: rotate(-20deg);
   z-index: 10;
 }
 
 .logoWrapper.mobile {
-  top: 10vh;
-  left: 5vw;
   height: 30vh;
   width: 75vw;
 }
@@ -33,7 +48,7 @@
   width: 100%;
   height: 130%;
   background-repeat: no-repeat;
-  background-size: 120vw;
+  background-size: cover;
   box-shadow: inset 0 0 0 2000px rgba(255, 241, 230, 0.7);
   overflow-x: hidden;
 }
@@ -44,19 +59,19 @@
 }
 
 .headerTextWrapper {
-  width: 60vw;
-  bottom: 5vh;
+  width: 50vw;
   height: 50vh;
-  right: 5vw;
-  position: absolute;
-  overflow: hidden;
+  padding-top: 50vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: visible;
   z-index: 10;
 }
 
 .headerTextWrapper.mobile {
   width: 100vw;
-  bottom: 0vh;
-  right: -5vw;
+  padding-top: 0;
 }
 
 .headerText {
@@ -65,7 +80,6 @@
   font-size: 4em;
   text-align: center;
   overflow: visible;
-  right: 10vw;
   transform: rotate(-20deg);
 }
 
@@ -74,5 +88,5 @@
 }
 
 .headerText.mobile {
-  font-size: 2.4em;
+  font-size: 2.1em;
 }

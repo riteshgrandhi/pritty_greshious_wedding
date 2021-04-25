@@ -1,0 +1,49 @@
+.card {
+  display: flex;
+  flex-direction: column;
+  background: radial-gradient(
+    circle at top,
+    rgba(255, 232, 214, 0.6),
+    rgba(255, 241, 230, 0.4)
+  );
+  border: 0.1em solid rgba(255, 232, 214, 0.6);
+  box-shadow: 0 1em 4em rgba(50, 50, 50, 0.1);
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+  border-radius: 1em;
+  padding: 1.5em;
+  color: #3a3a3a;
+}
+
+.card.mobile {
+  flex-direction: column;
+}
+
+.eventName {
+  font-family: "Romantic";
+  font-size: 2em;
+}
+
+.eventName.mobile {
+  font-size: 1.2em;
+}
+
+.eventDescription {
+  font-family: "Quicksand_Book";
+  font-size: 1.1em;
+  padding: 0.5em 0em;
+}
+
+.eventDescription.mobile {
+  font-size: 1em;
+}
+
+.eventLocation {
+  font-family: "Quicksand_Bold";
+  font-size: 1.2em;
+  padding: 0.2em 0em;
+}
+
+.eventLocation.mobile {
+  font-size: 1.1em;
+}
