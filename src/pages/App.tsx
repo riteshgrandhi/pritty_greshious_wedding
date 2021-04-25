@@ -20,7 +20,7 @@ function App() {
             setIsLoading(false);
           }}
         />
-        <Events />
+        <Events ref={eventRef} />
       </Container>
     </div>
   );

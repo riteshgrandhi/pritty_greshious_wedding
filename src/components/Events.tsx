@@ -15,7 +15,7 @@ const Icon: React.FC = () => (
   </div>
 );
 
-export const Events: React.FC = () => {
+export const Events = React.forwardRef<HTMLDivElement>((props, ref) => {
   const responsiveStyles = useResponsiveStyles(styles);
   const events: EventProps[] = [
     {
@@ -53,7 +53,7 @@ export const Events: React.FC = () => {
       bgImage="/images/fort.jpg"
       bgClassName={`${styles.bg} ${responsiveStyles.mobile}`}
     >
-      <div className={styles.wrapper}>
+      <div ref={ref} className={styles.wrapper}>
         <VerticalTimeline>
           {events.map((e, i) => (
             <VerticalTimelineElement
@@ -82,4 +82,4 @@ export const Events: React.FC = () => {
       </div>
     </ParallaxPage>
   );
-};
+});
