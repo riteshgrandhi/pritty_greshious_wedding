@@ -91,7 +91,8 @@ export const Header = React.forwardRef<
               transition={{ delay: 0.5, duration: 2, ease: "easeInOut" }}
             >
               The Wedding of <br />
-              <span className={styles.names}>Reshma & Ritesh</span>
+              <span className={styles.names}>Reshma & Ritesh</span><br />
+              <span className={styles.date}>18th August, 2021</span>
             </motion.p>
           </div>
         </div>

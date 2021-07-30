@@ -19,32 +19,35 @@ export const Events = React.forwardRef<HTMLDivElement>((props, ref) => {
   const responsiveStyles = useResponsiveStyles(styles);
   const events: EventProps[] = [
     {
-      eventName: "Bridal Shower & Mehendi",
-      eventDescription:
-        "Lorem ipsum dolor sit amet consectetur, adipisicing elit. Nam distinctio porro eveniet, atque ex id reprehenderit consequuntur dicta beatae neque aperiam possimus",
+      eventName: "Bridal Shower & Haldi",
+      eventDescription: "Join the bride's family to bless her with Haldi and Holi water!",
       eventLocation: "Bride's Home, Konalli, Karnataka",
-      eventDateTime: "10:00 AM onwards, 19th May 2021",
+      eventDateTime: "9:00 AM onwards, 17th August 2021",
+    },
+    {
+      eventName: "Mehendi & Sangeet",
+      eventDescription:
+        "Get together for this evening of dance, dinner and all round fun!",
+      eventLocation: "Bride's Home, Konalli, Karnataka",
+      eventDateTime: "3:00 PM onwards, 17th August 2021",
     },
     {
       eventName: "Groom's Rituals",
-      eventDescription:
-        "Lorem ipsum dolor sit amet consectetur, adipisicing elit. Nam distinctio porro eveniet, atque ex id reprehenderit consequuntur dicta beatae neque aperiam possimus",
-      eventLocation: "Grama Okkaliga Sabhabhavana Manira, Kumta, Karnataka",
-      eventDateTime: "6:00 AM onwards, 20th May 2021",
+      eventDescription: "Upanayana, Kaashi Yatra and 'The Making of' పెళ్లి కొడుకు/ಮದುವೆ ಗಂಡು",
+      eventLocation: "Shree Vanadurga Sabhabhavana, Kumta, Karnataka",
+      eventDateTime: "6:00 AM onwards, 18th August 2021",
     },
     {
       eventName: "The Wedding",
-      eventDescription:
-        "Lorem ipsum dolor sit amet consectetur, adipisicing elit. Nam distinctio porro eveniet, atque ex id reprehenderit consequuntur dicta beatae neque aperiam possimus",
+      eventDescription: "Bless the Bride and Groom as they mark their new beginning!",
       eventLocation: "Grama Okkaliga Sabhabhavana Manira, Kumta, Karnataka",
-      eventDateTime: "11:10 AM, 20th May 2021",
+      eventDateTime: "11:42 AM, 18th August 2021",
     },
     {
-      eventName: "Reception",
-      eventDescription:
-        "Lorem ipsum dolor sit amet consectetur, adipisicing elit. Nam distinctio porro eveniet, atque ex id reprehenderit consequuntur dicta beatae neque aperiam possimus",
-      eventLocation: "Chamber of Commerce, Rajahmundry, Andhra Pradesh",
-      eventDateTime: "7:30 PM onwards, 24th May 2021",
+      eventName: "Vratam & Reception",
+      eventDescription: "Meet the newly-weds host Satyanarayana Vratam with their families followed by Reception",
+      eventLocation: "Utsav Banquet Hall, Rajahmundry, Andhra Pradesh",
+      eventDateTime: "12:00 PM onwards, 21st August 2021",
     },
   ];
 
