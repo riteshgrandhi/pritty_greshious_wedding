@@ -16,7 +16,7 @@ on:
 # A workflow run is made up of one or more jobs that can run sequentially or in parallel
 jobs:
   # This workflow contains a single job called "build"
-  build:
+  build_and_deploy:
     # The type of runner that the job will run on
     runs-on: ubuntu-latest
 
@@ -25,21 +25,16 @@ jobs:
       # Checks-out your repository under $GITHUB_WORKSPACE, so your job can access it
       - uses: actions/checkout@v2
 
-      - name: Run install and build
+      - name: Build
         run: |
           yarn install
-          yarn build
-  deploy:
-    # The type of runner that the job will run on
-    runs-on: ubuntu-latest
-
-    # Steps represent a sequence of tasks that will be executed as part of the job
-    steps:
-      # Checks-out your repository under $GITHUB_WORKSPACE, so your job can access it
+          CI='' yarn build
+          
       - name: Deploy to GitHub Pages 
         uses: crazy-max/ghaction-github-pages@v2.5.0
         with:
           domain: wedding.prittygreshious.com
           build_dir: build
           commit_message: CI/CD push
+      
       
