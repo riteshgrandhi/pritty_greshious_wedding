@@ -40,13 +40,13 @@ export const Events = React.forwardRef<HTMLDivElement>((props, ref) => {
     {
       eventName: "The Wedding",
       eventDescription: "Bless the Bride and Groom as they mark their new beginning!",
-      eventLocation: "Grama Okkaliga Sabhabhavana Manira, Kumta, Karnataka",
+      eventLocation: "Shree Vanadurga Sabhabhavana, Kumta, Karnataka",
       eventDateTime: "11:42 AM, 18th August 2021",
     },
     {
       eventName: "Vratam & Reception",
       eventDescription: "Meet the newly-weds host Satyanarayana Vratam with their families followed by Reception",
-      eventLocation: "Utsav Banquet Hall, Rajahmundry, Andhra Pradesh",
+      eventLocation: "Sri Kanya Grand Banquet Hall, Rajahmundry, Andhra Pradesh",
       eventDateTime: "12:00 PM onwards, 21st August 2021",
     },
   ];
