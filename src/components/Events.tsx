@@ -33,7 +33,7 @@ export const Events = React.forwardRef<HTMLDivElement>((props, ref) => {
     },
     {
       eventName: "Groom's Rituals",
-      eventDescription: "Upanayana, Kaashi Yatra and 'The Making of' పెళ్లి కొడుకు/ಮದುವೆ ಗಂಡು",
+      eventDescription: "Upanayana, Kaashi Yatra and 'The Making of పెళ్లి కొడుకు/ಮದುವೆ ಗಂಡು'",
       eventLocation: "Shree Vanadurga Sabhabhavana, Kumta, Karnataka",
       eventDateTime: "6:00 AM onwards, 18th August 2021",
     },
